@@ -3,4 +3,5 @@ Rails.application.routes.draw do
 
   get '/planes' => 'planes#index'
   get '/flights' => 'flights#index'
+  get '/flights/:id' => 'flights#show'
 end
