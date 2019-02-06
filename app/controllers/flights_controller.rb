@@ -12,7 +12,9 @@ class FlightsController < ApplicationController
     def show
       flight = Flight.find(params[:id])
       plane = flight.plane
-      flight_data = { :flight => flight, :plane => plane }
+      reservations = Reservation.all
+
+      flight_data = { :flight => flight, :plane => plane, :reservations => reservations }
 
       respond_to do |format|
         format.html
