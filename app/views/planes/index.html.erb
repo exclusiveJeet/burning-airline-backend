@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <th>NAME</th>
+        <th>Rows</th> 
+        <th>Columns</th>
+    </tr>
+
+    <% @planes.each do |plan| %>
+    
+    <tr>
+        <td> <%= plan["name"] %> </td>
+        <td><%= plan["row"] %></td>
+        <td><%= plan["col"] %></td>
+    </tr>
+
+
+    <% end %>
+
+</table>
+
+<a href='/planes/new'> <button>Register New Plan</button></a>

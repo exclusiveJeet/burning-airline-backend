@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>Flight No.</th>
+        <th>Date</th> 
+        <th>Origin</th>
+        <th>Destination</th>
+    </tr>
+
+    <% @flights.each do |flight| %>
+    
+    <tr>
+        <td> <%= flight["f_no"] %> </td>
+        <td><%= flight["date"] %></td>
+        <td><%= flight["origin"] %></td>
+        <td><%= flight["destination"] %></td>
+    </tr>
+
+
+    <% end %>
+
+</table>
+<a href='/flights/new'> <button>Register New Route</button></a>
