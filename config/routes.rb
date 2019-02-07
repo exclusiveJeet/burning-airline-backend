@@ -5,9 +5,13 @@ Rails.application.routes.draw do
   get '/planes' => 'planes#index'
   get '/flights' => 'flights#index'
 
+
   get '/planes/new' => 'planes#new'
   get '/plane-submit' => 'planes#create'  
 
   get 'flights/new' => 'flights#new'
   get 'flight-submit' => 'flights#create'
+
+  get '/flights/:id' => 'flights#show'
+
 end
